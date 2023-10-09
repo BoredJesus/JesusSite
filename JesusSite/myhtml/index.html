@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bored_Jesus</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('../myhtml/img/background.png');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: merriweather-3d, sans-serif;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: rgba(98, 29, 129, 0.8);
+            border-radius: 10px;
+            margin: 20px;
+        }
+        header img {
+            width: 100px;
+            height: 100px;
+        }
+        header h1 {
+            margin: 10px 0;
+            color: white;
+        }
+        nav {
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 10px;
+            padding: 5px 15px;
+            background-color: #000000;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #242424;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .biography, .description {
+            flex-basis: calc(50% - 10px);
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .biography img, .description img {
+            width: 100%;
+            height: auto;
+        }
+        .biography .text, .description .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .biography:hover, .description:hover {
+            transform: scale(1.1);
+        }
+        .biography:hover .text, .description:hover .text {
+            opacity: 1;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <header>
+        <a href="Index.html">
+            <img src="../myhtml/img/index/logo.png" alt="Логотип" style="max-width: 100px; max-height: 100px;" />
+        </a>
+        <h1>Bored_Jesus</h1>
+        <nav>
+            <a href="../myhtml/index.html">Головна</a>
+            <a href="../myhtml/pages/contacts.html">Контакти</a>
+            <a href="../myhtml/pages/gallery.html">Галерея</a>
+        </nav>
+    </header>
+    <main>
+        <div class="biography">
+            <div class="bio-image">
+                <img src="../myhtml/img/index/Bored.png" alt="Фотография биографии" />
+            </div>
+            <div class="bio-text">
+                <p>My name is Vladislav, however many may know me as Jesus. Why is that? Briefly, at one time in my life (as I grew my hair long) I began to resemble the well-known Messiah. I was working in a deplorably famous institution "KOROVA" in Kharkov. That's how this pseudonym became attached to me. You can find sample photos in the gallery.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; Bored_Jesus 2023
+    </footer>
+</body>
+</html>

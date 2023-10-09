@@ -1,0 +1,31 @@
+/* Стили для страницы и контейнера с падающими фотографиями */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.falling-photos-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Добавьте стили для фотографий здесь */
+.falling-photos-container img {
+    position: absolute;
+    animation: fall linear infinite;
+    transform-origin: top;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(110%);
+        opacity: 1;
+    }
+}

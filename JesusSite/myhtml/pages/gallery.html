@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bored_Jesus Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('../img/background.png');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: merriweather-3d, sans-serif;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: rgba(98, 29, 129, 0.8);
+            border-radius: 10px;
+            margin: 20px;
+        }
+        header img {
+            width: 100px;
+            height: 100px;
+        }
+        header h1 {
+            margin: 10px 0;
+            color: white;
+        }
+        nav {
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 10px;
+            padding: 5px 15px;
+            background-color: #000000;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #242424;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 20px;
+            overflow-y: auto;
+        }
+        .biography, .description {
+            flex-basis: calc(50% - 10px);
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .biography img, .description img {
+            width: 100%;
+            height: auto;
+        }
+        .biography .text, .description .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .biography:hover, .description:hover {
+            transform: scale(1.1);
+        }
+        .biography:hover .text, .description:hover .text {
+            opacity: 1;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .gallery {
+            text-align: center;
+            padding: 80px;
+            background-color: rgba(98, 29, 129, 0.8);
+            border-radius: 80px;
+            margin: 80px;
+        }
+
+        .gallery h2 {
+            margin: 10px 0;
+            color: white;
+        }
+        .gallery h3 {
+            margin: 10px 0;
+            color: rgb(255, 0, 0);
+            background-color: #000000;
+        }
+
+        .media-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .media-container img {
+            max-width: 33%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.5s ease;
+        }
+
+        .media-container iframe {
+            max-width: 768px;
+            height: 432px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .media-container img:hover {
+            transform: scale(1.1);
+        }
+        .gallery .media-container img {
+    max-width: 25%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../img/index/logo.png" alt="Логотип" style="max-width: 100px; max-height: 100px;" />
+        </a>
+        <h1>Bored_Jesus</h1>
+        <nav>
+            <a href="../index.html">Головна</a>
+            <a href="../pages/contacts.html">Контакти</a>
+            <a href="../pages/gallery.html">Галерея</a>
+        </nav>
+    </header>
+    <main>
+        <div class="gallery">
+            <h2>EXAMPLES OF MY PHOTOS</h2>
+            <div class="photo-container">
+                <img src="../img/galery/rain.jpg" alt="Пример фото 1">
+                <img src="../img/galery/steam.jpg" alt="Пример фото 2">
+                <img src="../img/galery/flame.jpg" alt="Пример фото 3">
+                <img src="../img/galery/grass.jpg" alt="Пример фото 4">
+                <img src="../img/galery/rose.jpg" alt="Пример фото 5">
+                <img src="../img/galery/cactus.jpg" alt="Пример фото 6">
+            </div>
+        </div>
+        
+
+        <div class="gallery highlights-gallery">
+            <h2>HIGHLIGHTS </h2>
+            <h3>WARNING! VIDEO CANTAINS A LOT OF PROFANITY!</h3>
+            <div class="media-container">
+                <div class="video-container" data-video="https://www.youtube.com/embed/bU8w4w7erow" >
+                    <iframe width="1920" height="1080" src="https://www.youtube.com/embed/bU8w4w7erow?si=1lUzn0r17yPJ_Vev" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-container" data-video="https://www.youtube.com/embed/3a0bBPxcXUE">
+                    <iframe width="1920" height="1080" src="https://www.youtube.com/embed/3a0bBPxcXUE?si=U240FhS64oKH4Ilm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        &copy; Bored_Jesus 2023
+    </footer>
+</body>
+</html>
